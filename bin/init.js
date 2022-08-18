@@ -10,7 +10,7 @@ return app.connectMongoose()
         const application = app.initialize();
         application.listen(process.env.SERVER_PORT);
         logger.info(`Your server is listening on port ${process.env.SERVER_PORT}`);
-        initSchedule();
+        scheduleRunner();
     })
     .catch((error) => {
         logger.error('APP STOPPED');
