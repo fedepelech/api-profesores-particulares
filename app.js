@@ -11,6 +11,12 @@ const {extractJwt} = require('@utils/jwt-utils');
 const publicPath = require('./config/public');
 const cors = require('cors');
 
+function connectMongoose() {
+    const mongoose = require('mongoose');
+    mongoose.Promise = Promise;
+    return mongoose.connect('mongodb://' + process.env.MONGODB_HOST + ':' + process.env.MONGODB_PORT + '/' + process.env.MONGODB_DB, {useNewUrlParser: true});
+}
+
 function initialize() {
     app.use(expressWinston.logger({ //middleware para logear errores
         winstonInstance: logger,

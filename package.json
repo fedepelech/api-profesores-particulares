@@ -32,5 +32,9 @@
     "nyc": "^15.1.0",
     "should": "^13.2.3",
     "supertest": "^6.2.4"
+  },
+  "_moduleAliases": {
+    "@root": ".",
+    "@lib": "./lib/"
   }
 }
