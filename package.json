@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node ./bin/init.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -35,6 +36,7 @@
   },
   "_moduleAliases": {
     "@root": ".",
-    "@lib": "./lib/"
+    "@lib": "./lib/",
+    "@utils": "./lib/utils/"
   }
 }

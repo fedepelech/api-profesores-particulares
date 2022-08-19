@@ -4,6 +4,7 @@ const publicPaths = {
     ],
     put: [],
     post: [
+        'api/signup',
         'api/orders/[0-9]+/file',
     ],
     delete: []
