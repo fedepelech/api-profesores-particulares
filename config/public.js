@@ -1,6 +1,7 @@
 'use strict';
 const publicPaths = {
     get: [
+        'api/classes'
     ],
     put: [],
     post: [
