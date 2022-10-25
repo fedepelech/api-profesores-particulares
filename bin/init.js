@@ -4,8 +4,13 @@ require('module-alias/register');
 const app = require('../app');
 const logger = require('@lib/logger');
 const scheduleRunner = require('@lib/utils/schedule-runner');
+const { createUsers } = require('./create-default-data');
+
 
 return app.connectMongoose()
+    // .then(() => {
+    //     return createUsers();
+    // })
     .then(() => {
         const application = app.initialize();
         application.listen(process.env.SERVER_PORT);
@@ -17,4 +22,3 @@ return app.connectMongoose()
         logger.error(error.stack);
         return process.exit(1);
     });
-
