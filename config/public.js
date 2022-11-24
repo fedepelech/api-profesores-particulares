@@ -1,13 +1,13 @@
 'use strict';
 const publicPaths = {
     get: [
-        'api/classes'
+        'api/teacher/[a-z0-9]+',
+        'api/classes',
     ],
     put: [],
     post: [
         'api/signup',
         'api/login',
-        'api/orders/[0-9]+/file',
     ],
     delete: []
 };

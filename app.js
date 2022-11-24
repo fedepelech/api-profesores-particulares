@@ -2,7 +2,7 @@
 const express = require('express');
 const path = require('path');
 const logger = require('@lib/logger');
-// const cookieParser = require('cookie-parser');
+const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const routes = require('@lib/routes');
 const expressWinston = require('express-winston');
@@ -28,7 +28,8 @@ function initialize() {
     app.use(cors());
     app.use(bodyParser.json());//parsea el body de las requests y lo hace mas de acceso mas facil
     app.use(bodyParser.urlencoded({extended: false})); 
-    // app.use(cookieParser());
+    app.use(cookieParser());
+    app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
     app.use('/public', express.static(path.join(__dirname, 'public')));
     app.get(publicPath.regex('get'), extractJwt);
     app.put(publicPath.regex('put'), extractJwt);
