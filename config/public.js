@@ -8,6 +8,7 @@ const publicPaths = {
     post: [
         'api/signup',
         'api/login',
+        'api/me/password/restore'
     ],
     delete: []
 };
